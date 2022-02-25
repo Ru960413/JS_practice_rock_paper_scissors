@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My first JavaScript project: Rock Paper Scissors</title>
+  </head>
+  <body>
+    <script>
+      /*thoughts:
+      1. ask player to choose betwee rock, paper or scissors
+      2. make the computer randomly pick between rock, paper, and scissors
+      3. have 2 parameters: playerSelction and computerSelection
+      4. make it play once, using function playOnce()
+      5. if player pick paper, and the computer pick rock, what will happen?
+      6. consider all the possibilities, and declare whether the player wins or loses
+      7. loop the existing code. 
+      */
+      let playerSelection = prompt(
+        "Make your choice(rock, paper or scissors?)",
+        ""
+      );
+      let array = ["ROCK", "PAPER", "SCISSOR"];
+      function computerPlay() {}
+      playerSelection = playerSelection.toUpperCase();
+
+      function playOnce(playerSelection, computerSelction) {
+        if (playerSelection === "ROCK") {
+          if (computerSelction === "ROCK") {
+            alert("It's a tie. Both are rock!");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
