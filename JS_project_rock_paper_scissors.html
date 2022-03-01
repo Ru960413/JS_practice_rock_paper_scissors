@@ -6,9 +6,10 @@
   </head>
   <body>
     <script>
-      /*thoughts:
+      /*thoughts(alogorithm):
       1. ask player to choose betwee rock, paper or scissors
-      2. make the computer randomly pick between rock, paper, and scissors
+      
+      2. make the computer randomly pick between rock, paper, and scissors(by using a function?)
       3. have 2 parameters: playerSelction and computerSelection
       4. make it play once, using function playOnce()
       5. if player pick paper, and the computer pick rock, what will happen?
@@ -19,17 +20,46 @@
         "Make your choice(rock, paper or scissors?)",
         ""
       );
-      let array = ["ROCK", "PAPER", "SCISSOR"];
-      function computerPlay() {}
-      playerSelection = playerSelection.toUpperCase();
 
-      function playOnce(playerSelection, computerSelction) {
+      function computerPlay() {
+        let array = ["ROCK", "PAPER", "SCISSOR"];
+        array[Math.floor(Math.random() * array.length)];
+      }
+
+      playerSelection = playerSelection.toUpperCase();
+      let computerSelection = computerPlay();
+
+      function playOnce(playerSelection, computerSelection) {
         if (playerSelection === "ROCK") {
           if (computerSelction === "ROCK") {
-            alert("It's a tie. Both are rock!");
+            alert("It's a tie!");
+          } else if (computerSelction === "PAPER") {
+            alert("You win! Paper beats rock!");
+          } else if (computerSelction === "SCISSORS") {
+            alert("You lose! Rock beats scissors!");
+          }
+        }
+        if (playerSelection === "PAPER") {
+          if (computerSelection === "PAPER") {
+            alert("It's a tie!");
+          } else if (computerSelection === "SCISSORS") {
+            alert("You win! Scissors beat paper!");
+          } else if (computerSelection === "ROCK") {
+            alert("You lose! Paper beats rock!");
+          }
+        }
+        if (playerSelection === "SCISSORS") {
+          if (computerSelection === "SCISSORS") {
+            alert("It's a tie!");
+          } else if (computerSelection === "ROCK") {
+            alert("You win! Rock beat scissors!");
+          } else if (computerSelection === "PAPER") {
+            alert("You lose! Scissors beats paper!");
           }
         }
       }
+
+      playOnce();
     </script>
   </body>
 </html>
