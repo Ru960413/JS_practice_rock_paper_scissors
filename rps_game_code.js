@@ -1,8 +1,8 @@
-/*thoughts(alogorithm):
-      1. ask player to choose betwee rock, paper or scissors
+/*thoughts(algorithm):
+      1. ask player to choose between rock, paper or scissors
 
       2. make the computer randomly pick between rock, paper, and scissors(by using a function?)
-      3. have 2 parameters: playerSelction and computerSelection
+      3. have 2 parameters: playerSelection and computerSelection
       4. make it play once, using function playOnce()
       5. In what situations will the player win?
       6. In what situations will the player lose?
