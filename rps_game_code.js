@@ -1,18 +1,22 @@
 /*thoughts(algorithm):
       1. ask player to choose between rock, paper or scissors
-
-      2. make the computer randomly pick between rock, paper, and scissors(by using a function?)
+      2. make the computer randomly pick between rock, paper, and scissors by using a function
       3. have 2 parameters: playerSelection and computerSelection
       4. make it play once, using function playOnce()
       5. In what situations will the player win?
       6. In what situations will the player lose?
-      7. return the results
+      7. alert the results
+      8.keep the scores of both the computer and the player
 
-      8. write a new function game(), and call for the function playOnce(), and keep scores
-      9. let the game play for five rounds(loop the existing code using for loop)
+      9.display the scores on the screen(leave it until the next version)
+
+      10. write a new function game(), and call for the function playOnce()
+      11. let the game play for five rounds,loop the existing code using "for loop"
 
       */
 let playerSelection = prompt("Make your choice(rock, paper or scissors?)", "");
+let playerScore = 0;
+let computerScore = 0;
 
 function computerPlay() {
   let array = ["rock", "paper", "scissors"];
@@ -35,12 +39,24 @@ function playOnce(playerSelection, computerSelection) {
     (playerSelection == "scissors" && computerSelection == "paper")
   ) {
     alert("You win! Congrats!");
+    playerScore += 1;
   } else {
     alert("You lose, oh no!");
+    computerScore += 1;
   }
 }
+function playGame() {
+  playOnce(playerSelection, computerSelection);
+}
+for (let i = 0; i < 5; i++) {
+  playGame();
+}
 
-playOnce(playerSelection, computerSelection);
+/*playOnce(playerSelection, computerSelection);
+console.log(computerScore);
+console.log(playerScore);
+console.log(playerSelection);
+console.log(computerSelection);*/
 
 /*function playFiveRounds() {
         for (i = 0; i < 5; i++) {
