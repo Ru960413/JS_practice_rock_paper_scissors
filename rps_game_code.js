@@ -14,11 +14,15 @@
       */
 let playerScore = 0;
 let computerScore = 0;
+//set both the score of the computer and the player to zero
+
 function computerPlay() {
   let array = ["rock", "paper", "scissors"];
   return array[Math.floor(Math.random() * 3)];
 }
+//let the computer randomly pick rock, paper or scissors
 let computerSelection = computerPlay();
+
 function playOnce() {
   let playerSelection = prompt(
     "Make your choice(rock, paper or scissors?)",
@@ -44,10 +48,12 @@ function playOnce() {
     computerScore += 1;
   }
 }
+//this function tells the computer all the win/lose/even situations,and count the scores
 
 for (let i = 0; i < 5; i++) {
   playOnce();
 }
+//repeats the game for five rounds
 
 function displayTheWinner() {
   if (playerScore == computerScore) {
@@ -58,6 +64,7 @@ function displayTheWinner() {
     alert("Oh no! You lose 😭");
   }
 }
+//this function displays the winner
 
 displayTheWinner();
 console.log(computerScore);
