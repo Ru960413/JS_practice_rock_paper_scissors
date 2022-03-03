@@ -7,9 +7,7 @@
       6. In what situations will the player lose?
       7. alert the results
       8.keep the scores of both the computer and the player
-
       9.display the scores on the screen(leave it until the next version)
-
       10. write a new function game(), and call for the function playOnce()
       11. let the game play for five rounds,loop the existing code using "for loop"
 
