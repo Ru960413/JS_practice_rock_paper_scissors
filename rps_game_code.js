@@ -14,19 +14,20 @@
       11. let the game play for five rounds,loop the existing code using "for loop"
 
       */
-let playerSelection = prompt("Make your choice(rock, paper or scissors?)", "");
 let playerScore = 0;
 let computerScore = 0;
-
 function computerPlay() {
   let array = ["rock", "paper", "scissors"];
   return array[Math.floor(Math.random() * 3)];
 }
-
-playerSelection = playerSelection.toLowerCase();
 let computerSelection = computerPlay();
+function playOnce() {
+  let playerSelection = prompt(
+    "Make your choice(rock, paper or scissors?)",
+    ""
+  );
+  playerSelection = playerSelection.toLowerCase();
 
-function playOnce(playerSelection, computerSelection) {
   if (
     (playerSelection == "rock" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "scissors") ||
@@ -45,21 +46,21 @@ function playOnce(playerSelection, computerSelection) {
     computerScore += 1;
   }
 }
-function playGame() {
-  playOnce(playerSelection, computerSelection);
-}
-for (let i = 0; i < 5; i++) {
-  playGame();
-}
 
-/*playOnce(playerSelection, computerSelection);
+for (let i = 0; i < 5; i++) {
+  playOnce();
+}
 console.log(computerScore);
 console.log(playerScore);
-console.log(playerSelection);
-console.log(computerSelection);*/
+
+/*playOnce(playerSelection, computerSelection);
+      console.log(computerScore);
+      console.log(playerScore);
+      console.log(playerSelection);
+      console.log(computerSelection);*/
 
 /*function playFiveRounds() {
-        for (i = 0; i < 5; i++) {
-          playOnce(playerSelection, computerSelection);
-        }
-      }*/
+              for (i = 0; i < 5; i++) {
+                playOnce(playerSelection, computerSelection);
+              }
+            }*/
