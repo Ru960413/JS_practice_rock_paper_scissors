@@ -50,6 +50,18 @@ function playOnce() {
 for (let i = 0; i < 5; i++) {
   playOnce();
 }
+
+function displayTheWinner() {
+  if (playerScore == computerScore) {
+    alert("It's a tie! No one wins or loses.");
+  } else if (playerScore > computerScore) {
+    alert("Congrats! You win the game! Yay! 🤩");
+  } else {
+    alert("Oh no! You lose 😭");
+  }
+}
+
+displayTheWinner();
 console.log(computerScore);
 console.log(playerScore);
 
@@ -58,9 +70,3 @@ console.log(playerScore);
       console.log(playerScore);
       console.log(playerSelection);
       console.log(computerSelection);*/
-
-/*function playFiveRounds() {
-              for (i = 0; i < 5; i++) {
-                playOnce(playerSelection, computerSelection);
-              }
-            }*/
