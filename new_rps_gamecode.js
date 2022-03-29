@@ -1,10 +1,16 @@
 /*
 In our UI, the player should be able to play the game by clicking on buttons rather than typing their answer in a prompt.
 For now, remove the logic that plays exactly five rounds.
-Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
-Add a div for displaying results and change all of your console.logs into DOM methods.
-Display the running score, and announce a winner of the game once one player reaches 5 points.
-You will likely have to refactor (rework/rewrite) your original code to make it work for this. That’s OK! Reworking old code is an important part of a programmer’s life.
+
+1. Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function
+ with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
+
+2. Add a div for displaying results and change all of your console.logs into DOM methods.
+
+3. Display the running score, and announce a winner of the game once one player reaches 5 points.
+
+You will likely have to refactor (rework/rewrite) your original code to make it work for this. 
+That’s OK! Reworking old code is an important part of a programmer’s life.
 Once you’re all done with your UI and made sure everything’s satisfactory, commit your changes to the rps-ui branch.
 */
 
@@ -19,13 +25,10 @@ function computerPlay() {
 //let the computer randomly pick rock, paper or scissors
 let computerSelection = computerPlay();
 
-function playOnce() {
-  let playerSelection = prompt(
-    "Make your choice(rock, paper or scissors?)",
-    ""
-  );
-  playerSelection = playerSelection.toLowerCase();
+let btn = document.getElementById("btn");
+btn.addEventListener("click", playOnce());
 
+function playOnce() {
   if (
     (playerSelection == "rock" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "scissors") ||
@@ -54,7 +57,7 @@ function playOnce() {
 function displayTheWinner() {
   if (playerScore == computerScore) {
     alert("It's a tie! No one wins or loses.");
-  } else if (playerScore > computerScore) {
+  } else if (playerScore > 5) {
     alert("Congrats! You win the game! Yay! 🤩");
   } else {
     alert("Oh no! You lose 😭");
@@ -62,7 +65,7 @@ function displayTheWinner() {
 }
 //this function displays the winner
 
-playOnce();
+/*playOnce();
 displayTheWinner();
 console.log(computerScore);
-console.log(playerScore);
+console.log(playerScore);*/

@@ -3,12 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <title>My first JavaScript project: Rock Paper Scissors</title>
-    
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-    <script src = /new_rps_gamecode.js></script>
+    <div class="rps-UI">
+      <div class="text">Please make your choice, rock, paper, or scissors?</div>
+      <div class="container">
+        <div class="style">
+          <button id="btn">
+            <img src="./rocks-2.png"/>
+          </button>
+        </div>
+
+        <div class="style">
+          <button id="btn">
+            <img src="./parchment.png"/>
+          </button>
+        </div>
+
+        <div class="style">
+          <button id="btn">
+            <img src="./scissors.png"/>
+          </button>
+        </div>
+      </div>
+
+      <div class="winner-announcement">
+        <button id="btn2" class="display">Display the final winner</button>
+      </div>
+    </div>
+
+    <!--<script src = ./new_rps_gamecode.js></script>-->
   </body>
 
-
+  <div class="footer">
+      
+      <ul>
+        <li><div class="smallText">icon credits</div></li>
+        <li>
+          <a class="smallerText"
+            href="https://www.flaticon.com/free-icons/scissors"
+            title="scissors icons"
+            >Scissors icons created by Freepik - Flaticon</a
+          >
+        </li>
+        <li>
+          <a class="smallerText"
+          href="https://www.flaticon.com/free-icons/rock" title="rock icons"
+            >Rock icons created by Freepik - Flaticon</a
+          >
+        </li>
+        <li>
+          <a class="smallerText"
+          href="https://www.flaticon.com/free-icons/cute" title="cute icons"
+            >Cute icons created by Freepik - Flaticon</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </html>

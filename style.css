@@ -1,0 +1,64 @@
+/*style 
+1. the background 
+2. the background of the image on the buttons
+*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+div.style {
+  display: block;
+}
+img {
+  height: 250px;
+  width: 250px;
+}
+.text {
+  display: flex;
+  font-size: 36px;
+  font-family: fantasy;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: azure;
+}
+
+.smallText {
+  font-size: 16px;
+  display: flex;
+}
+.smallerText {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+}
+.winner-announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.display {
+  padding: 25px;
+  border-radius: 20px;
+  border: 20px;
+  border-color: darkcyan;
+  font-size: 20px;
+  font-weight: bold;
+  background: radial-gradient(darkblue, lightblue);
+  color: white;
+}
