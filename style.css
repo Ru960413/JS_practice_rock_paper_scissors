@@ -13,17 +13,25 @@ div.style {
   display: block;
 }
 img {
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
 }
 .text {
   display: flex;
-  font-size: 36px;
+  font-size: 30px;
   font-family: fantasy;
   font-weight: bold;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   margin-top: 30px;
+}
+.text-1 {
+  display: flex;
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -46,7 +54,39 @@ img {
 ul {
   list-style: none;
 }
-.winner-announcement {
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreText {
+  display: block;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.Score {
+  display: flex;
+  gap: 200px;
+  margin-top: 40px;
+}
+.display {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.display1,
+.display2 {
+  height: 160px;
+  width: 160px;
+  border: 3px solid grey;
+}
+
+/*.winner-announcement {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,4 +101,4 @@ ul {
   font-weight: bold;
   background: radial-gradient(darkblue, lightblue);
   color: white;
-}
+}*/
