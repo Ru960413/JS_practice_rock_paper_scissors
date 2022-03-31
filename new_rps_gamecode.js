@@ -18,17 +18,20 @@ let playerScore = 0;
 let computerScore = 0;
 //set both the score of the computer and the player to zero
 
-function computerPlay() {
+/*function computerPlay() {
   let array = ["rock", "paper", "scissors"];
   return array[Math.floor(Math.random() * 3)];
 }
 //let the computer randomly pick rock, paper or scissors
-let computerSelection = computerPlay();
+let computerSelection = computerPlay();*/
 
-let btn = document.getElementById("btn");
-btn.addEventListener("click", playOnce());
+function playARound() {
+  function computerPlay() {
+    let array = ["rock", "paper", "scissors"];
+    return array[Math.floor(Math.random() * 3)];
+  }
+  let computerSelection = computerPlay();
 
-function playOnce() {
   if (
     (playerSelection == "rock" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "scissors") ||
