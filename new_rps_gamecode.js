@@ -16,22 +16,28 @@ Once you’re all done with your UI and made sure everything’s satisfactory, c
 
 let playerScore = 0;
 let computerScore = 0;
-//set both the score of the computer and the player to zero
+const buttons = document.querySelectorAll("#Button");
+for (let button of buttons) {
+  button.addEventListener("click", playGame);
+}
 
-/*function computerPlay() {
+/*function playGame() {
+  const result = playARound(this.idName, computerPlay());
+  updateScores(result);
+  if (playerScore == 5 || computerScore == 5) {
+    endGame();
+  }
+}*/
+function computerPlay() {
   let array = ["rock", "paper", "scissors"];
   return array[Math.floor(Math.random() * 3)];
 }
-//let the computer randomly pick rock, paper or scissors
-let computerSelection = computerPlay();*/
+let computerSelection = computerPlay();
 
-function playARound() {
-  function computerPlay() {
-    let array = ["rock", "paper", "scissors"];
-    return array[Math.floor(Math.random() * 3)];
-  }
-  let computerSelection = computerPlay();
+//write a function to display result in the two divs , a function to  update the scores
+//, and another function to end the game.
 
+function playOnce(playerSelection, computerSelection) {
   if (
     (playerSelection == "rock" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "scissors") ||
@@ -50,14 +56,16 @@ function playARound() {
     computerScore += 1;
   }
 }
+
+/*function displayResult(result, msg) {
+  const playerScore = document.querySelector(".playerScore");
+  const computerScore = document.querySelector(".computerScore");
+  playerScore.textContent = msg;
+  computerScore.textContent = msg;
+}*/
 //this function tells the computer all the win/lose/even situations,and count the scores
 
-/*for (let i = 0; i < 5; i++) {
-  playOnce();
-}*/
-//repeats the game for five rounds
-
-function displayTheWinner() {
+/*function displayTheWinner() {
   if (playerScore == computerScore) {
     alert("It's a tie! No one wins or loses.");
   } else if (playerScore > 5) {
@@ -65,10 +73,5 @@ function displayTheWinner() {
   } else {
     alert("Oh no! You lose 😭");
   }
-}
+}*/
 //this function displays the winner
-
-/*playOnce();
-displayTheWinner();
-console.log(computerScore);
-console.log(playerScore);*/

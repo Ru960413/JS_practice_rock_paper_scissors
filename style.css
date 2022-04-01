@@ -77,10 +77,26 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.display1,
-.display2 {
+.playerScore,
+.computerScore {
   height: 160px;
   width: 160px;
   border: 3px solid darkcyan;
   background-color: #f5f3f3;
+}
+.playAgain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.playAgainBtn {
+  padding: 15px;
+  font-size: 20px;
+  font-family: fantasy;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
 }
