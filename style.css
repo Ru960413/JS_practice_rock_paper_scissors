@@ -10,10 +10,7 @@ body {
 div.style {
   display: block;
 }
-img {
-  height: 150px;
-  width: 150px;
-}
+
 .text {
   display: flex;
   font-size: 30px;
@@ -77,8 +74,8 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.playerScore,
-.computerScore {
+#playerScore,
+#computerScore {
   height: 160px;
   width: 160px;
   border: 3px solid darkcyan;
@@ -99,4 +96,25 @@ ul {
   color: black;
   border: none;
   border-radius: 10px;
+}
+
+input[type="image" i] {
+  display: block;
+  justify-items: center;
+  height: 150px;
+  width: 150px;
+}
+
+.display-moves {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img#p-move,
+img#c-move {
+  height: 150px;
+  width: 150px;
+  display: block;
+  justify-items: center;
 }

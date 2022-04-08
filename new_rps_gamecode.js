@@ -16,62 +16,87 @@ Once you’re all done with your UI and made sure everything’s satisfactory, c
 
 let playerScore = 0;
 let computerScore = 0;
-const buttons = document.querySelectorAll("#Button");
-for (let button of buttons) {
-  button.addEventListener("click", playGame);
-}
+const buttons = document.querySelectorAll("#button");
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const playerSelection = this.value;
+    const array = ["Rock", "Paper", "Scissors"];
+    const computerSelection = array[Math.floor(Math.random() * 3)];
 
-/*function playGame() {
-  const result = playARound(this.idName, computerPlay());
-  updateScores(result);
-  if (playerScore == 5 || computerScore == 5) {
-    endGame();
+    updateMoves(playerSelection, computerSelection);
+    playGame(playerSelection, computerSelection);
+    updateScore();
+    /*if (checkForTheWinner()) {
+      playerScore = computerScore = 0;
+      updateScore();
+      //When it returns true, set the scores back to zero and call updateScore() again to refresh the rendered scores:
+    }*/
+  });
+});
+
+//write a function to display result in the two divs , and another function to end the game.
+
+function playGame(playerSelection, computerSelection) {
+  const currentMatch = `${playerSelection} vs ${computerSelection}`;
+
+  // Tie check
+  if (playerSelection === computerSelection) {
+    alert(`${currentMatch} is a Tie`);
+    return;
   }
-}*/
-function computerPlay() {
-  let array = ["rock", "paper", "scissors"];
-  return array[Math.floor(Math.random() * 3)];
-}
-let computerSelection = computerPlay();
 
-//write a function to display result in the two divs , a function to  update the scores
-//, and another function to end the game.
-
-function playOnce(playerSelection, computerSelection) {
-  if (
-    (playerSelection == "rock" && computerSelection == "rock") ||
-    (playerSelection == "scissors" && computerSelection == "scissors") ||
-    (playerSelection == "paper" && computerSelection == "paper")
-  ) {
-    alert("It's a tie!");
-  } else if (
-    (playerSelection == "rock" && computerSelection == "scissors") ||
-    (playerSelection == "paper" && computerSelection == "rock") ||
-    (playerSelection == "scissors" && computerSelection == "paper")
-  ) {
-    alert("You win! Congrats!");
-    playerScore += 1;
-  } else {
-    alert("You lose, oh no!");
-    computerScore += 1;
+  // Rock
+  if (playerSelection === "Rock") {
+    if (computerSelection === "Scissors") {
+      alert(`${currentMatch} = You Win`);
+      playerScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      computerScore++;
+    }
+  }
+  // Paper
+  else if (playerSelection === "Paper") {
+    if (computerSelection === "Rock") {
+      alert(`${currentMatch} = You Win`);
+      playerScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      computerScore++;
+    }
+  }
+  // Scissors
+  else {
+    if (computerSelection === "Paper") {
+      alert(`${currentMatch} = You Win`);
+      playerScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      computerScore++;
+    }
   }
 }
 
-/*function displayResult(result, msg) {
-  const playerScore = document.querySelector(".playerScore");
-  const computerScore = document.querySelector(".computerScore");
-  playerScore.textContent = msg;
-  computerScore.textContent = msg;
-}*/
-//this function tells the computer all the win/lose/even situations,and count the scores
+function updateScore() {
+  document.getElementById("playerScore").textContent = playerScore;
+  document.getElementById("computerScore").textContent = computerScore;
+}
 
-/*function displayTheWinner() {
-  if (playerScore == computerScore) {
-    alert("It's a tie! No one wins or loses.");
-  } else if (playerScore > 5) {
+/*function checkForTheWinner() {
+  if (playerScore === 5 || computerScore === 5) {
+  }
+  if (playerScore === 5) {
     alert("Congrats! You win the game! Yay! 🤩");
   } else {
-    alert("Oh no! You lose 😭");
+    alert("Computer wins! Try again next time 😉");
   }
 }*/
-//this function displays the winner
+//有bug:沒辦法update score 和 alert winner
+
+function updateMoves(playerSelection, computerSelection) {
+  document.getElementById("p-move").src = `RPS_icons/${playerSelection}.png`;
+  document.getElementById("c-move").src = `RPS_icons/${computerSelection}.png`;
+}
+
+console.log(computerScore);
+console.log(playerScore);
