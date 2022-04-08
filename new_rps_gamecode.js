@@ -30,30 +30,30 @@ function playGame(playerSelection, computerSelection) {
   // Rock
   if (playerSelection === "Rock") {
     if (computerSelection === "Scissors") {
-      alert(`${currentMatch} = You Win`);
+      alert(`${currentMatch}, You Win!`);
       playerScore++;
     } else {
-      alert(`${currentMatch} = Computer Wins`);
+      alert(`${currentMatch}, Computer Wins`);
       computerScore++;
     }
   }
   // Paper
   else if (playerSelection === "Paper") {
     if (computerSelection === "Rock") {
-      alert(`${currentMatch} = You Win`);
+      alert(`${currentMatch}, You Win!`);
       playerScore++;
     } else {
-      alert(`${currentMatch} = Computer Wins`);
+      alert(`${currentMatch}, Computer Wins`);
       computerScore++;
     }
   }
   // Scissors
   else {
     if (computerSelection === "Paper") {
-      alert(`${currentMatch} = You Win`);
+      alert(`${currentMatch}, You Win!`);
       playerScore++;
     } else {
-      alert(`${currentMatch} = Computer Wins`);
+      alert(`${currentMatch}, Computer Wins`);
       computerScore++;
     }
   }
