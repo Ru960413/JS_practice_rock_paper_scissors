@@ -1,0 +1,135 @@
+body {
+  background-color: lightskyblue;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+div.style {
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.text {
+  display: flex;
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.text-1 {
+  display: flex;
+  font-size: 20px;
+  font-family: fantasy;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: azure;
+}
+
+.smallText {
+  font-size: 16px;
+  display: flex;
+}
+.smallerText {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreText {
+  display: block;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.Score {
+  display: flex;
+  gap: 200px;
+  margin-top: 20px;
+}
+.display {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+}
+#playerScore,
+#computerScore {
+  height: 50px;
+  width: 50px;
+  border: 3px solid darkblue;
+  background-color: #f5f3f3;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  text-align: center;
+}
+/*.playAgain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.playAgainBtn {
+  padding: 15px;
+  font-size: 20px;
+  font-family: fantasy;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}*/
+
+input[type="image" i] {
+  display: block;
+  justify-items: center;
+  height: 130px;
+  width: 130px;
+}
+
+.display-moves {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.move {
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
+img#p-move,
+img#c-move {
+  height: 100px;
+  width: 100px;
+  display: block;
+  justify-items: center;
+  background-color: white;
+  border-radius: 10px;
+}

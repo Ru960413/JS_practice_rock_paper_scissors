@@ -2,10 +2,89 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>My first JavaScript project: Rock Paper Scissors</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src = /rps_game_code.js></script>
+    <div class="rps-UI">
+      <div class="text">The Rock Paper Scissors Game</div>
+      <div class="text-1">First To Five Wins!</div>
+
+      <div class="display-moves">
+        <div class="move">
+          <img id="p-move" src="RPS_icons/Paper.png">
+          player's move
+        </div>
+        <div class="separator">VS</div>
+        <div class="move">
+          <img id="c-move" src="RPS_icons/Paper.png">
+          computer's move
+        </div>
+      </div>
+
+
+
+      <h2 class="text-1">Please click on the image below to select your move:</h2>
+      <div class="container">
+        <div class="style">
+          <input id="button" type= "image"  src="RPS_icons/Rock.png" value="Rock"></input>
+        </div>
+
+        <div class="style">
+          <input id="button" type= "image"  src="RPS_icons/Paper.png" value="Paper"></input>
+        </div>
+
+        <div class="style">
+          <input id="button" type= "image"  src="RPS_icons/Scissors.png" value="Scissors"></input>
+        </div>
+      </div>
+
+      <div class="container3">
+        <ul class="Score">
+          <li class="scoreText">Player Score</li>
+          <li class="scoreText">Computer Score</li>
+        </ul>
+      </div>
+
+      <div class="display">
+        <span id="playerScore">0</span>
+        <span id="computerScore">0</span>
+      </div>
+
+      <!--<div class="playAgain"> 
+        <button class="playAgainBtn">Play Again</button>
+      </div>-->
+      
+    </div>
+
+    <script src = ./new_rps_gamecode.js></script>
   </body>
+
+  <div class="footer">
+      
+      <ul>
+        <li><div class="smallText">icon credits</div></li>
+        <li>
+          <a class="smallerText"
+            href="https://www.flaticon.com/free-icons/scissors"
+            title="scissors icons"
+            >Scissors icons created by Freepik - Flaticon</a
+          >
+        </li>
+        <li>
+          <a class="smallerText"
+          href="https://www.flaticon.com/free-icons/rock" title="rock icons"
+            >Rock icons created by Freepik - Flaticon</a
+          >
+        </li>
+        <li>
+          <a class="smallerText"
+          href="https://www.flaticon.com/free-icons/cute" title="cute icons"
+            >Cute icons created by Freepik - Flaticon</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </html>
