@@ -14,19 +14,20 @@ div.style {
 .text {
   display: flex;
   font-size: 30px;
-  font-family: fantasy;
+  font-family: cursive;
   font-weight: bold;
   justify-content: center;
   margin-bottom: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .text-1 {
   display: flex;
-  font-size: 30px;
+  font-size: 20px;
   font-family: fantasy;
   font-weight: bold;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 800;
 }
 
 .footer {
@@ -66,7 +67,7 @@ ul {
 .Score {
   display: flex;
   gap: 200px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .display {
   display: flex;
@@ -76,8 +77,8 @@ ul {
 }
 #playerScore,
 #computerScore {
-  height: 160px;
-  width: 160px;
+  height: 100px;
+  width: 100px;
   border: 3px solid darkblue;
   background-color: #f5f3f3;
   font-size: 30px;
@@ -104,20 +105,25 @@ ul {
 input[type="image" i] {
   display: block;
   justify-items: center;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
 }
 
 .display-moves {
   display: flex;
-  justify-content: space-evenly;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
 }
-
+.move {
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
 img#p-move,
 img#c-move {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   display: block;
   justify-items: center;
 }
