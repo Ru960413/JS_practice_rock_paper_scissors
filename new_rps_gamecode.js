@@ -26,11 +26,11 @@ buttons.forEach((button) => {
     updateMoves(playerSelection, computerSelection);
     playGame(playerSelection, computerSelection);
     updateScore();
-    /*if (checkForTheWinner()) {
+    if (checkForTheWinner()) {
       playerScore = computerScore = 0;
       updateScore();
       //When it returns true, set the scores back to zero and call updateScore() again to refresh the rendered scores:
-    }*/
+    }
   });
 });
 
@@ -82,16 +82,16 @@ function updateScore() {
   document.getElementById("computerScore").textContent = computerScore;
 }
 
-/*function checkForTheWinner() {
+function checkForTheWinner() {
   if (playerScore === 5 || computerScore === 5) {
+    if (playerScore === 5) {
+      alert("Congrats! You win the game! Yay! 🤩");
+    } else {
+      alert("Computer wins! Try again next time 😉");
+    }
   }
-  if (playerScore === 5) {
-    alert("Congrats! You win the game! Yay! 🤩");
-  } else {
-    alert("Computer wins! Try again next time 😉");
-  }
-}*/
-//有bug:沒辦法update score 和 alert winner
+}
+//有bug:沒辦法 alert winner
 
 function updateMoves(playerSelection, computerSelection) {
   document.getElementById("p-move").src = `RPS_icons/${playerSelection}.png`;
